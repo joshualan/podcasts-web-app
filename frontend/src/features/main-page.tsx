@@ -1,12 +1,17 @@
 import { SideNavBar } from "features/side-nav-bar";
-import { Container, Grid } from "lib/component-library";
+import { Container, Grid, Box } from "lib/component-library";
 export const MainPage = () => {
   return (
-    <Container
-      sx={{ margin: "0px", paddingY: ({ spacing }) => spacing(5) }}
-      maxWidth={false}
+    <Box
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        margin: "0px",
+        paddingY: ({ spacing }) => spacing(5),
+        width: "100%",
+      }}
     >
-      <Grid container spacing={3}>
+      <Grid container spacing={3} maxWidth={"1400px"}>
         <Grid item sm={2}>
           <SideNavBar />
         </Grid>
@@ -17,6 +22,6 @@ export const MainPage = () => {
           <SideNavBar />
         </Grid>
       </Grid>
-    </Container>
+    </Box>
   );
 };

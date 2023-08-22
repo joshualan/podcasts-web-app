@@ -6,7 +6,7 @@ import {
   Typography,
   TypographyProps,
   styled,
-  useTheme,
+  alpha,
 } from "lib/component-library";
 import { Image } from "mui-image";
 import {
@@ -28,12 +28,23 @@ const StyledSubHeading = styled(Typography)<TypographyProps>(({ theme }) => ({
   fontSize: "14px",
 }));
 
-const StyledButton = styled(Button)<ButtonProps>(({ theme }) => ({
-  display: "flex",
-  justifyContent: "flex-start",
-  width: "100%",
-  color: theme.palette.text.primary,
-}));
+type Active = {
+  active?: boolean;
+};
+
+const StyledButton = styled(Button)<ButtonProps & Active>(
+  ({ theme, active }) => ({
+    display: "flex",
+    justifyContent: "flex-start",
+    width: "100%",
+    color: active ? theme.palette.primary.main : theme.palette.text.primary,
+    "&:hover": {
+      "background-color": active
+        ? alpha(theme.palette.primary.dark, 0.5)
+        : theme.palette.grey[700],
+    },
+  })
+);
 
 export const SideNavBar = () => {
   return (
@@ -54,9 +65,10 @@ export const SideNavBar = () => {
         <div>
           <StyledSubHeading align="left">MENU</StyledSubHeading>
           <StyledButton
-            sx={{
-              color: "primary.main",
-            }}
+            active
+            // sx={{
+            //   color: "primary.main",
+            // }}
             startIcon={<Explore />}
           >
             Discover

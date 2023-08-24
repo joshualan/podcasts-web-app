@@ -1,5 +1,6 @@
 import { SideNavBar } from "features/side-nav-bar";
 import { Container, Grid, Box } from "lib/component-library";
+import { Trending } from "./trending";
 export const MainPage = () => {
   return (
     <Box
@@ -11,12 +12,12 @@ export const MainPage = () => {
         width: "100%",
       }}
     >
-      <Grid container spacing={3} maxWidth={"1400px"}>
+      <Grid container spacing={5} maxWidth={"1400px"}>
         <Grid item sm={2}>
           <SideNavBar />
         </Grid>
         <Grid item sm={6}>
-          <SideNavBar />
+          <Trending />
         </Grid>
         <Grid item sm={4}>
           <SideNavBar />

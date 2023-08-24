@@ -64,13 +64,7 @@ export const SideNavBar = () => {
         </div>
         <div>
           <StyledSubHeading align="left">MENU</StyledSubHeading>
-          <StyledButton
-            active
-            // sx={{
-            //   color: "primary.main",
-            // }}
-            startIcon={<Explore />}
-          >
+          <StyledButton active startIcon={<Explore />}>
             Discover
           </StyledButton>
           <StyledButton startIcon={<Bolt />}>Trending</StyledButton>

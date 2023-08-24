@@ -1,4 +1,5 @@
 import { AlanCard } from "components/alan-card";
+import { AlanButton } from "components/alan-button";
 import {
   Button,
   ButtonProps,
@@ -9,8 +10,7 @@ import {
   alpha,
 } from "lib/component-library";
 
-const StyledButton = styled(Button)<ButtonProps>(({ theme }) => ({
-  borderRadius: theme.spacing(5),
+const StyledButton = styled(AlanButton)<ButtonProps>(({ theme }) => ({
   backgroundColor: alpha(theme.palette.primary.light, 0.5),
 }));
 

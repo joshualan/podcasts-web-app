@@ -1,6 +1,7 @@
 import { SideNavBar } from "features/side-nav-bar";
-import { Container, Grid, Box } from "lib/component-library";
-import { Trending } from "./trending";
+import { Container, Grid, Box, Stack } from "lib/component-library";
+import { Trending } from "features/trending";
+import { Suggestions } from "features/suggestions";
 export const MainPage = () => {
   return (
     <Box
@@ -17,7 +18,10 @@ export const MainPage = () => {
           <SideNavBar />
         </Grid>
         <Grid item sm={6}>
-          <Trending />
+          <Stack gap={8}>
+            <Trending />
+            <Suggestions />
+          </Stack>
         </Grid>
         <Grid item sm={4}>
           <SideNavBar />

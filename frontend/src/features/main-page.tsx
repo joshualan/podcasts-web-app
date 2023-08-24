@@ -1,5 +1,5 @@
 import { SideNavBar } from "features/side-nav-bar";
-import { Container, Grid, Box, Stack } from "lib/component-library";
+import { Grid, Box, Stack } from "lib/component-library";
 import { Trending } from "features/trending";
 import { Suggestions } from "features/suggestions";
 export const MainPage = () => {

@@ -1,6 +1,6 @@
 import { AlanCard } from "components/alan-card";
 import { ReactElement } from "react";
-import { Stack, Typography, styled, alpha } from "lib/component-library";
+import { Stack, Typography, styled } from "lib/component-library";
 import { FavoriteBorder, MoreVert, Favorite } from "lib/icons";
 type PodcastSuggestionPropsType = {
   title: string;

@@ -1,7 +1,7 @@
 import { AlanCard } from "components/alan-card";
 import { ReactElement } from "react";
 import { Stack, Typography, styled, alpha } from "lib/component-library";
-
+import { FavoriteBorder, MoreVert, Favorite } from "lib/icons";
 type PodcastSuggestionPropsType = {
   title: string;
   icon: ReactElement;
@@ -28,12 +28,24 @@ export const PodcastSuggestion = ({
       <Stack direction={"row"} spacing={5}>
         <ImageCard>{Icon}</ImageCard>
 
-        <Stack justifyContent={"center"} spacing={3}>
+        <Stack justifyContent={"center"} spacing={1}>
           <Typography align="left">{title}</Typography>
           <Typography align="left" color={(theme) => theme.palette.grey[500]}>
             {`${author} • ${episodes} episodes`}
           </Typography>
         </Stack>
+
+        <div style={{ marginLeft: "auto" }}>
+          <Stack
+            direction={"row"}
+            height="100%"
+            alignItems={"center"}
+            spacing={4}
+          >
+            {favorited ? <Favorite /> : <FavoriteBorder />}
+            <MoreVert />
+          </Stack>
+        </div>
       </Stack>
     </AlanCard>
   );

@@ -42,7 +42,7 @@ const podcasts = [
     episodes: 16,
     icon: (
       <Image
-        src={"https://placekitten.com/80/80"}
+        src={"https://placedog.net/80/80"}
         style={{ maxWidth: "100px", borderRadius: "50%" }}
         bgColor="transparent"
       />
@@ -54,7 +54,7 @@ const podcasts = [
     episodes: 10,
     icon: (
       <Image
-        src={"https://placekitten.com/80/80"}
+        src={"https://placebear.com/80/80"}
         style={{ maxWidth: "100px", borderRadius: "50%" }}
         bgColor="transparent"
       />

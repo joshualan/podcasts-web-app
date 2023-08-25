@@ -6,10 +6,20 @@ import {
   Typography,
   styled,
   alpha,
+  Box,
+  Stack,
 } from "lib/component-library";
+import { ReactComponent as ReactLogo } from "assets/friends.svg";
 
 const StyledButton = styled(AlanButton)<ButtonProps>(({ theme }) => ({
   backgroundColor: alpha(theme.palette.primary.light, 0.5),
+}));
+
+const StyledDiv = styled(Box)<{ gray?: boolean }>(({ theme, gray }) => ({
+  height: "4px",
+  backgroundColor: gray ? theme.palette.grey[500] : theme.palette.common.white,
+  width: "32px",
+  borderRadius: "4px",
 }));
 
 export const Trending = () => {
@@ -33,10 +43,10 @@ export const Trending = () => {
         <Grid height={"100%"} container spacing={3}>
           <Grid
             item
-            xs={4}
+            xs={6}
             container
             direction={"column"}
-            justifyContent={"center"}
+            justifyContent={"space-around"}
             gap={4}
           >
             <StyledButton
@@ -57,16 +67,15 @@ export const Trending = () => {
             >
               How We Can Save This World
             </Typography>
+
+            <Stack direction={"row"} spacing={4}>
+              <StyledDiv />
+              <StyledDiv gray sx={{ width: (theme) => theme.spacing(2) }} />
+              <StyledDiv gray sx={{ width: (theme) => theme.spacing(2) }} />
+            </Stack>
           </Grid>
-          <Grid
-            container
-            direction={"column"}
-            justifyContent={"center"}
-            gap={4}
-            item
-            xs={8}
-          >
-            <Typography variant="h4">Graphic Here</Typography>
+          <Grid container alignItems={"center"} gap={4} item xs={6}>
+            <ReactLogo style={{ maxHeight: "200px" }} />
           </Grid>
         </Grid>
       </AlanCard>

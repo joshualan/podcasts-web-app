@@ -2,6 +2,7 @@ import { SideNavBar } from "features/side-nav-bar";
 import { Grid, Box, Stack } from "lib/component-library";
 import { Trending } from "features/trending";
 import { Suggestions } from "features/suggestions";
+import { Search } from "features/search";
 export const MainPage = () => {
   return (
     <Box
@@ -24,7 +25,9 @@ export const MainPage = () => {
           </Stack>
         </Grid>
         <Grid item sm={4}>
-          <SideNavBar />
+          <Stack gap={8}>
+            <Search />
+          </Stack>
         </Grid>
       </Grid>
     </Box>

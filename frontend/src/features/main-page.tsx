@@ -13,7 +13,7 @@ export const MainPage = () => {
         width: "100%",
       }}
     >
-      <Grid container spacing={5} maxWidth={"1400px"}>
+      <Grid container columnSpacing={6} maxWidth={"1600px"}>
         <Grid item sm={2}>
           <SideNavBar />
         </Grid>

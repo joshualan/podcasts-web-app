@@ -67,9 +67,7 @@ export const Trending = () => {
             item
             xs={8}
           >
-            <Stack>
-              <Typography variant="h4">Graphic Here</Typography>
-            </Stack>
+            <Typography variant="h4">Graphic Here</Typography>
           </Grid>
         </Grid>
       </AlanCard>

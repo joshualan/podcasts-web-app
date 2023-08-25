@@ -52,7 +52,7 @@ export const SideNavBar = () => {
       <Stack spacing={6} padding={5}>
         <div>
           <Image
-            src={"https://placekitten.com/g/100/100"}
+            src={"https://placekitten.com/100/100"}
             style={{ maxWidth: "100px", borderRadius: "50%" }}
           />
           <Typography variant="h6" sx={{ paddingTop: 2 }}>

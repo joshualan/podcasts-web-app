@@ -3,6 +3,7 @@ import { Grid, Box, Stack } from "lib/component-library";
 import { Trending } from "features/trending";
 import { Suggestions } from "features/suggestions";
 import { Search } from "features/search";
+import { TopPodcasters } from "features/top-podcasters";
 export const MainPage = () => {
   return (
     <Box
@@ -25,8 +26,9 @@ export const MainPage = () => {
           </Stack>
         </Grid>
         <Grid item sm={4}>
-          <Stack gap={8}>
+          <Stack gap={6}>
             <Search />
+            <TopPodcasters />
           </Stack>
         </Grid>
       </Grid>

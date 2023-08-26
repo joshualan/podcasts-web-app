@@ -29,6 +29,7 @@ export const Search = () => {
           sx: {
             paddingLeft: (theme) => theme.spacing(5),
             borderRadius: (theme) => theme.spacing(5),
+            backgroundColor: (theme) => theme.palette.grey[900],
           },
         }}
       />

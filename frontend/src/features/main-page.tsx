@@ -4,6 +4,7 @@ import { Trending } from "features/trending";
 import { Suggestions } from "features/suggestions";
 import { Search } from "features/search";
 import { TopPodcasters } from "features/top-podcasters";
+import { NowPlaying } from "./now-playing";
 export const MainPage = () => {
   return (
     <Box
@@ -29,6 +30,7 @@ export const MainPage = () => {
           <Stack gap={6}>
             <Search />
             <TopPodcasters />
+            <NowPlaying />
           </Stack>
         </Grid>
       </Grid>
